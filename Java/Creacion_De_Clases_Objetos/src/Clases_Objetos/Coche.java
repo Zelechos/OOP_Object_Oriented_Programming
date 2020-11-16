@@ -1,6 +1,6 @@
 /*
  * @Author : Pragmatic Coder
- * @Repositorio : Desconocido
+ * @Repositorio : https://github.com/Zelechos/POO_Programacion_Orientada_A_Objetos
  */
 package Clases_Objetos;
 
@@ -67,6 +67,44 @@ public class Coche {
         
             BUILD SUCCESSFUL (total time: 0 seconds)
        */
+        System.out.println("***************************************");
+         
+        // A continuacion crearemos otro Objeto de la Clase Coche (como ejemplo)
+        
+        Coche Auto2 = new Coche();//Nuestro objetos es el Auto2
+        
+        //Nuevamente llenamos los Atributos de mi Objeto
+        Auto2.Color = "Verde";
+        Auto2.Marca = "Tesla";
+        Auto2.Km = 100;
+        
+        
+        //Ahora mostramos el resultado
+        System.out.println("El color del Auto2 es : "+Auto2.Color);
+        System.out.println("La Marca del Auto2 es : "+Auto2.Marca);
+        System.out.println("El Kilometraje del Auto2 es : "+Auto2.Km);
+        
+
+        /*              Salida
+        run:
+            El color del Auto0 es : Rojo
+            La Marca del Auto0 es : Mercedes
+            El Kilometraje del Auto0 es : 0
+            ***************************************
+            El color del Auto1 es : Azul
+            La Marca del Auto1 es : Audi
+            El Kilometraje del Auto1 es : 10
+            ***************************************
+            El color del Auto2 es : Verde
+            La Marca del Auto2 es : Tesla
+            El Kilometraje del Auto2 es : 100
+
+            BUILD SUCCESSFUL (total time: 7 seconds)
+        
+       */
+        
+        
+
         
     }
     
