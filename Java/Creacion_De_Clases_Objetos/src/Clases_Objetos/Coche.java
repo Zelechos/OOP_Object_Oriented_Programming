@@ -84,6 +84,7 @@ public class Coche {
         System.out.println("La Marca del Auto2 es : "+Auto2.Marca);
         System.out.println("El Kilometraje del Auto2 es : "+Auto2.Km); 
         
+        
         /*              Salida
         run:
             El color del Auto0 es : Rojo
