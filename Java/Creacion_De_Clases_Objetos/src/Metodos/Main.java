@@ -12,19 +12,15 @@ public class Main {
         Operacion Op =  new Operacion();
         
         //LLamamos a los Metodos del Objeto
-        Op.Numbers();
-        Op.Sumar();
-        Op.Restar();
-        Op.Multiplicar();
-        Op.Division();
-        Op.Showme();
+        Op.Activate();
      
         /*          Salida
-       La Suma es : 100
-       La Resta es : 98
-       La Multiplicacion es : 99
-       La Division es : 99
-       BUILD SUCCESSFUL (total time: 9 seconds) 
+        La Suma es : 9
+        La Resta es : 1
+        La Multiplicacion es : 20
+        La Division es : 1
+        El Exponente es : 625
+        BUILD SUCCESSFUL (total time: 5 seconds)
        */
         
     }

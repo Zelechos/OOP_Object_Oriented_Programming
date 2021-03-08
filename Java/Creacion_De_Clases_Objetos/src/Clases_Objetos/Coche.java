@@ -41,7 +41,9 @@ public class Coche {
         
         // A continuacion crearemos otro Objeto de la Clase Coche
         
-        Coche Auto1 = new Coche();//Nuestro Objeto es el Auto1
+        Coche Auto1 , Auto2 ;//Podemos crear varios objetos de una sola vez como se ve aqui Auto1, Auto2
+        
+        Auto1 = new Coche();;//Aqui instanciamos el objeto Auto1
         
         //Nuevamente llenamos los Atributos de mi Objeto
         Auto1.Color = "Azul";
@@ -70,7 +72,7 @@ public class Coche {
          
         // A continuacion crearemos otro Objeto de la Clase Coche (como ejemplo)
         
-        Coche Auto2 = new Coche();//Nuestro objetos es el Auto2
+        Auto2  = new Coche();//Aqui instanciamos el objeto Auto2
         
         //Nuevamente llenamos los Atributos de mi Objeto
         Auto2.Color = "Verde";
