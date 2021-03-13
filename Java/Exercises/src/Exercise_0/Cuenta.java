@@ -14,9 +14,6 @@ public class Cuenta {
     float cantidad;
     
     //Metodos Constructores
-    public Cuenta(){
-    }
-    
     public Cuenta(String titular){
         this.titular = titular;
     }
