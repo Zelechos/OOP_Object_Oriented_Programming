@@ -79,6 +79,34 @@ public class OperacionPlus {
         
     }
     
+    //Metodo para Generar un Array con numeros aleatorios con los dos numeros como extremos
+    public String Aleatorios(int Number1 , int Number2 , int Cantidad){
+        int [] NumAleatorios = new int[Cantidad];
+        String Mensaje = "";
+        for(int Iterador = 0; Iterador<Cantidad ; Iterador++){
+                    
+            NumAleatorios[Iterador] = (int)(Number1 + (Math.random() * Number2));
+            
+            if(Iterador == 0 ){
+                Mensaje += "["+NumAleatorios[Iterador];
+            }
+            
+            
+            if(Iterador == 9){
+                Mensaje += "-"+NumAleatorios[Iterador]+"]";
+                break;
+            }
+            
+            if(Iterador < 8 ){
+                Mensaje += "-"+NumAleatorios[Iterador];
+            }
+
+
+        }
+        
+        return Mensaje;
+    }
+    
     //Comparamos Los numeros
     public int Comparacion(int Number1 ,int Number2){
         
@@ -110,6 +138,7 @@ public class OperacionPlus {
         System.out.println("La Division es : "+Division(Number1,Number2));
         System.out.println("El Exponente es : "+Exponente(Number1,Number2));
         System.out.println("El Factorial es : "+Factorial(Number1));
+        System.out.println("El Array de Numeros Aleatorios es : "+Aleatorios(Number1, Number2, 10));
     }
     
     
