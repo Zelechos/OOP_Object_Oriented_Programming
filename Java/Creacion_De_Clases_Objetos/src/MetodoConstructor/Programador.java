@@ -18,16 +18,21 @@ public class Programador {
     //El Primer metodo que se suele crear es el Metodo Constructor que en ocasiones puede se mas de uno
     
     //Metodo Constructor
-    /*Como los dije con anterioridad puede haber mas de un metodo constructor en una clase en este caso creare dos
-    - el primer metodo constructor se centrar en solo recivir los datos esenciales del Programador en este caso
+    /*Como los dije con anterioridad puede haber mas de un metodo constructor en una clase en este caso creare tres
+    - el primer metodo constructor se centrara en solo recibir los datos esenciales del Programador en este caso
     su Nombre, Apellido, Edad y nada mas. 
+    
     - el segundo metodo constructor tendra los datos esenciales ademas de Años_de_Experiencia,Nivel_de_Experiencia , Tipo_de_Programador
     que son los datos que se necesitan para ver si cumple con los requisitos minimos de la oferta laboral de la empresa
+    
     - el tercer metodo constructor tendra solo los datos requeridos para la entrevista tecnica como:
     Tecnologias ,Nivel_de_Experiencia , Tipo_de_Programador, Años_de_Experiencia y nada mas 
+    
     */
+    
+    //Metodo Constructor por Defecto
     public Programador(){
-        
+        //Totalmente vacio
     }
     
     //Primer Metodo Constructor de Datos esenciales
@@ -56,10 +61,19 @@ public class Programador {
         this.Nivel_de_Experiencia = Nivel_de_Experiencia;
         this.Años_de_Experiencia = Años_de_Experiencia;
     }
+    
+    
+    public Programador(String Nombre, String Apellido, int Edad, String[] Tecnologias, String Nivel_de_Experiencia){
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Edad = Edad;
+        this.Tecnologias = Tecnologias;
+        this.Nivel_de_Experiencia = Nivel_de_Experiencia;
+    }
 
 
     //Metodos
-      public  void PedirDataC1(){
+    public void PedirDataC1(){
         Input = new Scanner(System.in);
         
         System.out.print("Introduzca su Nombre : ");
@@ -70,12 +84,12 @@ public class Programador {
         Edad = Input.nextInt();
         
         Instance = new Programador(Nombre, Apellido, Edad);
-        Instance.DataC1();
+        System.out.println(Instance.DataC1());
     }
     
     public void PedirDataC2(){
         Input = new Scanner(System.in);
-        
+        Tecnologias = new String[7];
         System.out.print("Introduzca su Nombre : ");
         Nombre = Input.nextLine();
         System.out.print("Introduzca su Apellido : ");
@@ -83,7 +97,7 @@ public class Programador {
         System.out.print("Introduzca su que Tipo de Programador es : ");
         Tipo_de_Programador = Input.nextLine();
         //Creamos un Bucle for para llenar nuestro array de Tecnologias
-        System.out.println("Digite 5 Tecnologias en las que esta especializado : ");
+        System.out.println("Digite "+Tecnologias.length+" Tecnologias en las que esta especializado : ");
         for(int Rango = 0; Rango < Tecnologias.length; Rango++ ){
             System.out.print("Tecnologia "+(Rango+1)+" : ");
             Tecnologias[Rango] = Input.nextLine();
@@ -92,23 +106,22 @@ public class Programador {
         Edad = Input.nextInt();
         
        Instance = new Programador(Nombre, Apellido, Tipo_de_Programador, Tecnologias, Edad);
-       Instance.DataC2();
+       System.out.println(Instance.DataC2());
 
 
     }
     
-    
-    
     public void PedirDataC3(){
         Input = new Scanner(System.in);
-        
+        Tecnologias = new String[9];
+
         System.out.print("Introduzca su Tipo de Programador es : ");
         Tipo_de_Programador = Input.nextLine();
         
         //Creamos un Bucle for para llenar nuestro array de Tecnologias
-        System.out.print("Digite 5 Tecnologias en las que esta especializado : ");
+        System.out.println("Digite "+Tecnologias.length+" Tecnologias en las que esta especializado : ");
         for(int Rango = 0; Rango < Tecnologias.length; Rango++ ){
-            System.out.println("Tecnologia "+(Rango+1)+" : ");
+            System.out.print("Tecnologia "+(Rango+1)+" : ");
             Tecnologias[Rango] = Input.nextLine();
         }
         
@@ -120,11 +133,35 @@ public class Programador {
         Años_de_Experiencia = Input.nextInt();
         
         Instance = new Programador(Tecnologias, Nivel_de_Experiencia, Tipo_de_Programador, Años_de_Experiencia);
-        Instance.DataC3();
+        System.out.println(Instance.DataC3());
+
 
     }
    
-   
+    public void PedirDataC4(){
+        Input = new Scanner(System.in);
+        Tecnologias = new String[5];
+        
+        System.out.print("Digite su Nombre : ");
+        Nombre = Input.nextLine();
+        System.out.print("Digite su Apellido : ");
+        Apellido = Input.nextLine();
+        System.out.print("Nivel de Experiencia : ");
+        Nivel_de_Experiencia = Input.nextLine();
+        
+        System.out.println("Digite las Tecnologias que domina : ");
+        for(int Iterador = 0 ; Iterador<Tecnologias.length ; Iterador ++){
+            System.out.print("Tecnologia "+(Iterador+1)+" : ");
+            Tecnologias[Iterador] = Input.nextLine();
+        }
+        
+        System.out.print("Digite su Edad : ");
+        Edad = Input.nextInt();
+        
+        Instance = new Programador(Nombre, Apellido, Edad, Tecnologias, Nivel_de_Experiencia);
+        System.out.println(Instance.DataC4());
+        
+    }
     
     
     
@@ -151,6 +188,11 @@ public class Programador {
     public String DataC3(){
         return "Tipo de Programador : "+ Tipo_de_Programador+ "\n Tecnologias : "+MostrarArray(Tecnologias)+"\n Nivel de Experiencia : "+ Nivel_de_Experiencia +
                 "\n Años de Experiencia : "+ Años_de_Experiencia;
+    }
+    
+    
+    public String DataC4(){
+        return " Nombre : "+ Nombre +"\n Apellido : "+ Apellido +"\n Edad : "+ Edad + "\n Tecnologias : "+MostrarArray(Tecnologias)+"\n Nivel de Experiencia : "+ Nivel_de_Experiencia;
     }
     
     
